@@ -12,7 +12,9 @@ import {
   NavbarToggler,
 } from "reactstrap";
 import { logout } from "../managers/authManager";
-
+export const getBikesInShopCount = () => {
+  return fetch(`${apiUrl}/inventory`).then((res) => res.json());
+};
 export default function NavBar({ loggedInUser, setLoggedInUser }) {
   const [inventory, setInventory] = useState(0);
   const [open, setOpen] = useState(false);

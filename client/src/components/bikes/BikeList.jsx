@@ -13,15 +13,15 @@ export default function BikeList({ setDetailsBikeId }) {
     getAllBikes();
   }, []);
   return (
-    <>
-      <h2>Bikes</h2>
-      {bikes.map((bike) => (
-        <BikeCard
-          bike={bike}
-          setDetailsBikeId={setDetailsBikeId}
-          key={`bike-${bike.id}`}
-        ></BikeCard>
-      ))}
-    </>
+      <>
+    <h2>Bikes</h2>
+    {bikes.map((bike) => (
+    <BikeCard
+        bike={bike}
+        setDetailsBikeId={setDetailsBikeId}
+        key={bike.id}
+    ></BikeCard>
+    ))}
+</>
   );
 }
